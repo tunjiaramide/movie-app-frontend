@@ -1,0 +1,35 @@
+.header {
+  padding: 20px 30px;
+  background-color: #fff;
+}
+
+.top_nav {
+  display: flex;
+  font-weight: 300;
+}
+
+.leftside {
+  flex: 1;
+}
+
+.leftside li {
+  display: inline-block;
+  margin-right: 20px;
+  padding: 10px 15px;
+}
+
+.rightside li {
+  display: inline-block;
+  margin-right: 30px;
+}
+
+.add {
+  border: 1px solid #eeeeee;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.content {
+  padding: 50px 45px;
+}
