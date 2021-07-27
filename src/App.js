@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import Sidebar from "./components/sidebar/Sidebar";
+import Main from "./components/main/Main";
+import Home from './pages/home/Home';
+import Single from './pages/single/Single';
+import Register from './pages/auth/Register';
+import Login from './pages/auth/Login';
+import Addmovie from "./pages/addmovie/Addmovie";
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <Sidebar />
+        <Main>
+          <Switch>
+            <Route exact path="/">
+                <Home />
+            </Route>
+            <Route exact path="/register">
+              <Register />
+            </Route>
+            <Route exact path="/login">
+              <Login />
+            </Route>
+            <Route exact path="/movie/addmovie">
+              <Addmovie />
+            </Route> 
+            <Route>
+              <Single exact path="/movie/:id" />
+            </Route>
+          </Switch>       
+        </Main>
+      </div>
+    </Router>
   );
 }
 
