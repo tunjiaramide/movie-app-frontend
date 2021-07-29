@@ -4,8 +4,8 @@ import styles from './MovieItem.module.css'
 export default function MovieItem() {
     return (
         <div className={styles.movie_cover}>
-                <div className="img_cover">
-                    <img src="https://via.placeholder.com/250-x370" alt="" />
+                <div className={styles.img_cover}>
+                    <img src="images/poster1.jpeg" alt="" />
                 </div>
                 <div className={styles.content_cover}>
                     <h2>Ender's Game</h2>

@@ -1,0 +1,39 @@
+.register_cover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+}
+
+.register_cover h2 {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.form {
+  width: 300px;
+}
+
+.form input {
+  padding: 0.7rem 0.75rem;
+  margin-bottom: 20px;
+}
+
+.form input::placeholder {
+  font-size: 12px;
+  color: rgb(129, 126, 126);
+}
+
+.form button {
+  padding: 8px 20px;
+  background-color: #60db7b;
+  color: #ffffff;
+  font-size: 13px;
+  margin-right: 10px;
+}
+
+.form span {
+  font-weight: bold;
+  font-size: 13px;
+}

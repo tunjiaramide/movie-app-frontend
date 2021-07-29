@@ -1,0 +1,30 @@
+.addmovie_cover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  width: 70%;
+}
+
+.form > div {
+  margin-bottom: 26px;
+}
+
+.form label {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.form input {
+  padding: 0.7rem 0.75rem;
+}
+
+.form button {
+  padding: 8px 20px;
+  background-color: #60db7b;
+  color: #ffffff;
+  font-size: 13px;
+  margin-right: 10px;
+}

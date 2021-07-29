@@ -18,6 +18,7 @@ export default function Main({ children}) {
                             <li><Link to="/">Home</Link></li>
                             <li><Link to="/login">Login</Link></li>
                             <li><Link to="/register">Register</Link></li>
+                            <li><Link to="/logout">Log Out</Link></li>
                             <li className={styles.add}><Link to="/movie/addmovie">Add Movie</Link></li>
                         </ul>
                     </div>
