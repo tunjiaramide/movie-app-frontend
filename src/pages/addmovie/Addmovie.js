@@ -29,11 +29,11 @@ export default function Addmovie() {
                     </div>
                     <div class="col-md-9">
                         <select className="form-select">
-                            <option selected value="1">Action</option>
-                            <option value="2">Adventure</option>
-                            <option value="3">Comedy</option>
-                            <option value="3">Horror</option>
-                            <option value="3">Romance</option>
+                            <option selected value="action">Action</option>
+                            <option value="adventure">Adventure</option>
+                            <option value="horror">Horror</option>
+                            <option value="drama">Drama</option>
+                            <option value="comedy">Comedy</option>
                         </select>
                     </div>
                  </div>
@@ -43,10 +43,10 @@ export default function Addmovie() {
                     </div>
                     <div class="col-md-9">
                         <select className="form-select">
-                            <option selected value="1">Nigeria</option>
-                            <option value="2">United States</option>
-                            <option value="3">United Kingdom</option>
-                            <option value="3">Asia</option>
+                            <option selected value="nigeria">Nigeria</option>
+                            <option value="usa">United States</option>
+                            <option value="uk">United Kingdom</option>
+                            <option value="asia">Asia</option>
                         </select>
                     </div>
                  </div>

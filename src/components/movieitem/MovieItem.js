@@ -1,21 +1,21 @@
 import React from 'react'
 import styles from './MovieItem.module.css'
+import { Link } from 'react-router-dom'
 
-export default function MovieItem() {
+export default function MovieItem({ movie }) {
+    const { _id, title, genre, minutes, description, poster} = movie;
     return (
         <div className={styles.movie_cover}>
                 <div className={styles.img_cover}>
-                    <img src="images/poster1.jpeg" alt="" />
+                    <img src={poster} alt="" />
                 </div>
                 <div className={styles.content_cover}>
-                    <h2>Ender's Game</h2>
-                    <h5>Action</h5>
-                    <h6>120 Minutes <span>Stars</span></h6>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                        sed do eiusmod tempor incididunt ut labore et 
-                        dolore magna aliqua. </p>
+                    <h2>{title}</h2>
+                    <h5>{genre}</h5>
+                    <h6>{minutes} Minutes <span>Stars</span></h6>
+                    <p>{description.substring(0, 70)}...</p>
                 </div>
-                <button className={`btn ${styles.more}`}>Details</button>
+                <button className={`btn ${styles.more}`}><Link to={`/movies/${_id}`}>Details</Link></button>
         </div> 
     )
 }

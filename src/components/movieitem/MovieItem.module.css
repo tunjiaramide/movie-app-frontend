@@ -5,11 +5,13 @@
 
 .img_cover {
   width: 250px;
+  height: 360px;
 }
 
 .img_cover img {
   width: 100%;
   object-fit: cover;
+  height: 100%;
 }
 
 .content_cover {
