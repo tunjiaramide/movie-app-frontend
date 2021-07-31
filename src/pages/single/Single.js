@@ -3,12 +3,13 @@ import styles from './Single.module.css'
 import { useQuery } from 'react-query';
 import { useLocation } from 'react-router-dom';
 import { getSingleMovie } from '../../api';
+import Youtube from '../../components/Youtube';
 
 export default function Single() {
     const location = useLocation();
     const movieId = location.pathname.split('/')[2];
     
-    const {isLoading, error, isError, data} = useQuery('movies', () => getSingleMovie(movieId))
+    const {isLoading, error, isError, data} = useQuery('movie', () => getSingleMovie(movieId))
     
     if(isLoading) return (
         <div className={styles.details_cover}>
@@ -17,23 +18,15 @@ export default function Single() {
     )
     if(isError) return (
         <div className={styles.details_cover}>
-               <p>{error}</p>     
+               <p>{error.message}</p>     
         </div>
     )
- 
+
+
     return (
         <div className={styles.details_cover}>
             <div className={styles.youtube}>
-                <iframe 
-                    width="100%" 
-                    height="450" 
-                    src="https://www.youtube.com/embed/wDscAvheUeg" 
-                    title="YouTube video player" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                </iframe>
-
+               <Youtube url={data[0].youtube}/> 
             </div>
             <div className={styles.content}>
                 <div className={styles.meta}>
