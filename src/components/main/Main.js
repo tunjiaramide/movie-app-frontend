@@ -1,16 +1,18 @@
-import React from 'react'
+import React, {useContext } from 'react'
 import styles from './Main.module.css'
 import { Link } from 'react-router-dom'
+import { InTheatresContext } from '../../App'
 
-export default function Main({ children}) {
+export default function Main({ children }) {
+    const {inTheatres} = useContext(InTheatresContext);
     return (
         <div>
             <header className={styles.header}>
                 <div className={styles.top_nav}>
                     <div className={styles.leftside}>
                         <ul>
-                            <li>In theatres</li>
-                            <li>Coming Soon</li>
+                            <li><button onClick={() => inTheatres(true) } className="btn">In theatres</button></li>
+                            <li><button onClick={() => inTheatres(false) } className="btn">Coming Soon</button></li>
                         </ul>
                     </div>
                     <div className={styles.rightside}>
